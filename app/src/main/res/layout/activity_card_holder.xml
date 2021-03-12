@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background2"
+    tools:context=".CardHolderActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:id="@+id/arrow_back"
+        android:layout_marginStart="@dimen/marginArrowBack"
+        android:layout_marginTop="@dimen/marginArrowBack"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/brandLogo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height100"
+        android:layout_marginTop="@dimen/def_registerTop"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginLeft50"
+        android:src="@drawable/aversi"
+        android:gravity="center"
+        android:text="@string/registration"
+        android:textAppearance="@style/activity_title"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:layout_marginTop="30dp"
+        android:text="@string/card_number"
+        android:textAppearance="@style/labelFormText" />
+
+    <ge.lifecard.zcard.CustomEditText.CustomEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardNumberEditText"
+        android:drawableRight="@drawable/ic_barcode"
+        android:alpha="0.6"
+        style="@style/editText"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_holder"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:layout_marginTop="@dimen/marginTopLabel"
+        android:textAppearance="@style/labelFormText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardHolderEditText"
+        android:alpha="0.6"
+        style="@style/editText"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/more_info"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:layout_marginTop="@dimen/marginTopLabel"
+        android:textAppearance="@style/labelFormText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/moreInfoEditText"
+        android:alpha="0.6"
+        style="@style/editText"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acceptLoyaltyCardButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginLeft50"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:text="@string/add_loyalty_card"
+        style="@style/button"
+        />
+
+</LinearLayout>

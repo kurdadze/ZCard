@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragmentHome">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal|top"
+        app:civ_border_color="#3FE346"
+        app:civ_border_width="0.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userFirstLastNameLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="სახელი გვარი"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/labelFormText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userEmailLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="e-mail"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/labelFormSmallText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:paddingStart="@dimen/start20"
+        android:paddingEnd="@dimen/end20"
+        android:text="@string/log_out"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        style="@style/button"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginTop="50dp"
+        android:text="@string/language"
+        android:textAppearance="@style/labelFormText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/geo_flag"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/geo_flag"
+        app:civ_border_color="#3FE346"
+        app:civ_border_width="0.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/eng_flag"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/eng_flag"
+        app:civ_border_color="#3FE346"
+        app:civ_border_width="0.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>

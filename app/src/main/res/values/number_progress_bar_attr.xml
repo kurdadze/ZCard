@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NumberedProgressBar">
+        <attr name="npbTextSize" format="dimension" />
+        <attr name="npbFontFamily" format="reference" />
+        <attr name="npbFontColor" format="color" />
+    </declare-styleable>
+</resources>

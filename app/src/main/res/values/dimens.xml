@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="def_standartTop">30dp</dimen>
+    <dimen name="def_registerTop">15dp</dimen>
+    <dimen name="editTextPaddingStart">10dp</dimen>
+    <dimen name="editTextPaddingEnd">10dp</dimen>
+    <dimen name="editTextMinHeight">40dp</dimen>
+    <dimen name="marginTopLabelAndEditText">5dp</dimen>
+    <dimen name="marginTopLabel">20dp</dimen>
+    <dimen name="marginArrowBack">15dp</dimen>
+    <dimen name="marginTopButton">15dp</dimen>
+    <dimen name="marginLeft50">50dp</dimen>
+    <dimen name="marginRight50">50dp</dimen>
+    <dimen name="marginLeft30">50dp</dimen>
+    <dimen name="marginRight30">50dp</dimen>
+    <dimen name="width100">100dp</dimen>
+    <dimen name="height100">100dp</dimen>
+    <dimen name="height50">50dp</dimen>
+    <dimen name="height30">30dp</dimen>
+    <dimen name="start20">20dp</dimen>
+    <dimen name="end20">20dp</dimen>
+
+
+    <dimen name="fontSize30">30sp</dimen>
+</resources>

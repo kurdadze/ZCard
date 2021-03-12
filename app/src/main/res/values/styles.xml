@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="activity_title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/darkGreen</item>
+        <item name="fontFamily">@font/bpg_mrgvlovani_caps</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="labelFormText" parent="Widget.AppCompat.TextView">
+<!--        <item name="android:layout_marginStart">@dimen/marginLeft50</item>-->
+<!--        <item name="android:layout_marginEnd">@dimen/marginRight50</item>-->
+<!--        <item name="android:layout_marginTop">@dimen/marginTopLabel</item>-->
+        <item name="android:textColor">@color/darkGreen</item>
+        <item name="fontFamily">@font/bpg_mrgvlovani_caps</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="labelFormSmallText" parent="Widget.AppCompat.TextView">
+        <!--        <item name="android:layout_marginStart">@dimen/marginLeft50</item>-->
+        <!--        <item name="android:layout_marginEnd">@dimen/marginRight50</item>-->
+        <!--        <item name="android:layout_marginTop">@dimen/marginTopLabel</item>-->
+        <item name="android:textColor">@color/darkGreen</item>
+        <item name="fontFamily">@font/bpg_mrgvlovani_caps</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="editText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_marginTop">@dimen/marginTopLabelAndEditText</item>
+        <item name="android:paddingStart">@dimen/editTextPaddingStart</item>
+        <item name="android:paddingEnd">@dimen/editTextPaddingEnd</item>
+        <item name="android:layout_marginStart">@dimen/marginLeft50</item>
+        <item name="android:layout_marginEnd">@dimen/marginLeft50</item>
+        <item name="android:minHeight">@dimen/editTextMinHeight</item>
+        <item name="fontFamily">@font/bpg_mrgvlovani_caps</item>
+        <item name="android:background">@drawable/edit_box_style</item>
+    </style>
+
+    <style name="button">
+        <item name="android:minHeight">@dimen/editTextMinHeight</item>
+        <item name="android:fontFamily">@font/bpg_mrgvlovani_caps</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:background">@drawable/rounded_shape</item>
+    </style>
+
+    <style name="brand_card">
+        <item name="android:background">@drawable/card_shape</item>
+    </style>
+
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/background2">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:id="@+id/arrow_back"
+        android:layout_marginStart="@dimen/marginArrowBack"
+        android:layout_marginTop="@dimen/marginArrowBack"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/loginTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="@dimen/def_registerTop"
+        android:gravity="center"
+        android:text="@string/registration"
+        android:textAppearance="@style/activity_title"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:layout_marginTop="10dp"
+        android:text="@string/user_email"
+        android:textAppearance="@style/labelFormText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userEditText"
+        android:inputType="textEmailAddress"
+        android:alpha="0.6"
+        android:text="qwerty@gmail.com"
+        style="@style/editText"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/passwordLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/password"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:layout_marginTop="@dimen/marginTopLabel"
+        android:textAppearance="@style/labelFormText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordEditText"
+        android:inputType="textPassword"
+        android:alpha="0.6"
+        android:text="123"
+        style="@style/editText"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/confirmPasswordLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/confirm_password"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:layout_marginTop="@dimen/marginTopLabel"
+        android:textAppearance="@style/labelFormText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirmPasswordEditText"
+        android:inputType="textPassword"
+        android:alpha="0.6"
+        android:text="123"
+        style="@style/editText"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/firstNameLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/first_name"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:layout_marginTop="@dimen/marginTopLabel"
+        android:textAppearance="@style/labelFormText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstNameEditText"
+        android:alpha="0.6"
+        android:text="First"
+        style="@style/editText"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lastNameLabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/last_name"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:layout_marginTop="@dimen/marginTopLabel"
+        android:textAppearance="@style/labelFormText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastNameEditText"
+        android:alpha="0.6"
+        android:text="Last"
+        style="@style/editText"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="@dimen/marginLeft50"
+        android:layout_marginEnd="@dimen/marginRight50"
+        android:text="@string/create_account"
+        style="@style/button"
+        />
+
+</LinearLayout>
