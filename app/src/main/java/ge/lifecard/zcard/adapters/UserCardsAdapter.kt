@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.user_card_item.view.*
 class UserCardsAdapter(var context: Context, var list: List<UserCards>?) : BaseAdapter() {
 
     override fun getItem(position: Int): Any {
-        return list!!.get(position)
+        return list!![position]
     }
 
     override fun getItemId(position: Int): Long {

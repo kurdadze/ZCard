@@ -17,7 +17,7 @@ class BarCodeActivity : AppCompatActivity(), View.OnClickListener {
 
         val intent = intent
         val cardNumber = intent.getStringExtra("cardNumber")
-        val genBarCode = cardHelper.generateBarCode(cardNumber)
+        val genBarCode = cardNumber?.let { cardHelper.generateBarCode(it) }
         binding.barCodeImage.setImageBitmap(genBarCode)
         binding.cardNumber.text = cardNumber
         binding.arrowBack.setOnClickListener(this)

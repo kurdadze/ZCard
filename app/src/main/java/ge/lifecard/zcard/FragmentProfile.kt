@@ -21,7 +21,6 @@ class FragmentProfile : Fragment(), View.OnClickListener {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
-//    private val context = getActivity()
 
     override fun onCreateView(
         inflater: LayoutInflater,

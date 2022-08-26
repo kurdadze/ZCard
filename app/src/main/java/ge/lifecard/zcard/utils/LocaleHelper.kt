@@ -1,11 +1,11 @@
 package ge.lifecard.zcard.utils
 
+import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Build
 import android.os.LocaleList
-import android.view.LayoutInflater
 import java.util.*
 
 @Suppress("deprecation")
@@ -18,7 +18,6 @@ private fun updateResourcesLegacy(context: Context, languageCode: String): Conte
     return context.createConfigurationContext(configuration)
 }
 
-@TargetApi(Build.VERSION_CODES.N)
 private fun updateResources(context: Context, languageCode: String): Context {
     val configuration = Configuration(context.resources.configuration)
 
@@ -33,17 +32,6 @@ private fun updateResources(context: Context, languageCode: String): Context {
     return ctx
 }
 
-fun applyOverrideConfigurationLocale(base: Context, overrideConfiguration: Configuration?): Configuration? {
-    if (overrideConfiguration != null && Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
-        val uiMode = overrideConfiguration.uiMode
-        overrideConfiguration.setTo(base.resources.configuration)
-        overrideConfiguration.uiMode = uiMode
-    }
-    return overrideConfiguration
-}
-
 fun updateLocale(context: Context, language: String): Context {
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-        updateResources(context, language)
-    } else updateResourcesLegacy(context, language)
+    return updateResources(context, language)
 }

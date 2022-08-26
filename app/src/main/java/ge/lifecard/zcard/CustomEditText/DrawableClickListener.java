@@ -1,6 +1,6 @@
 package ge.lifecard.zcard.CustomEditText;
 
 public interface DrawableClickListener {
-    public static enum DrawablePosition { TOP, BOTTOM, LEFT, RIGHT };
-    public void onClick(DrawablePosition target);
+    enum DrawablePosition { TOP, BOTTOM, LEFT, RIGHT };
+    void onClick(DrawablePosition target);
 }

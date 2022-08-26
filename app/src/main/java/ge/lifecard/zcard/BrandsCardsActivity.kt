@@ -33,7 +33,7 @@ class BrandsCardsActivity : LanguageAwareActivity(), View.OnClickListener {
                 val response = withContext(Dispatchers.IO) {
                     NetworkClient.userService.getBrands()
                 }
-                Log.d("responce", response.toString())
+                Log.d("response", response.toString())
                 val brandsCardAdapter = BrandsCardAdapter(applicationContext, response)
                 binding.cardGridViewList.adapter = brandsCardAdapter
             } catch (e: Exception) {
@@ -43,8 +43,8 @@ class BrandsCardsActivity : LanguageAwareActivity(), View.OnClickListener {
             }
         }
 
-        binding.cardGridViewList.onItemClickListener = object : AdapterView.OnItemClickListener {
-            override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+        binding.cardGridViewList.onItemClickListener =
+            AdapterView.OnItemClickListener { parent, _, position, _ ->
                 val item = parent.adapter.getItem(position) as BrandsCard
                 val intent = Intent(this@BrandsCardsActivity, CardHolderActivity::class.java)
                 val extras = Bundle()
@@ -52,9 +52,8 @@ class BrandsCardsActivity : LanguageAwareActivity(), View.OnClickListener {
                 extras.putString("brandId", item.brandId.toString())
                 intent.putExtras(extras)
                 startActivity(intent)
-//                makeText(applicationContext, item.brandName, LENGTH_SHORT).show()
+                //                makeText(applicationContext, item.brandName, LENGTH_SHORT).show()
             }
-        }
     }
 
     override fun onClick(v: View?) {

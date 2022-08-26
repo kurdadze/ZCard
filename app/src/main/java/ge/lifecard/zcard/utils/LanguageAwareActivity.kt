@@ -16,7 +16,7 @@ abstract class LanguageAwareActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        contentView = findViewById<ContentFrameLayout>(android.R.id.content)
+        contentView = findViewById(android.R.id.content)
         loadingView = layoutInflater.inflate(R.layout.dialog_loading, contentView, false)
     }
 

@@ -11,7 +11,6 @@ import ge.lifecard.zcard.utils.LanguageAwareActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.IOException
-import java.lang.String
 
 class RegisterActivity : LanguageAwareActivity(), View.OnClickListener {
 
@@ -32,19 +31,19 @@ class RegisterActivity : LanguageAwareActivity(), View.OnClickListener {
                 finish()
             }
             binding.buttonRegistration -> {
-                registartion()
+                registration()
             }
         }
     }
 
 
-    private fun registartion() = lifecycleScope.launchWhenCreated {
+    private fun registration() = lifecycleScope.launchWhenCreated {
         val userName = binding.userEditText.text.toString()
         val password = binding.passwordEditText.text.toString()
         val firstName = binding.firstNameEditText.text.toString()
         val lastName = binding.lastNameEditText.text.toString()
 
-        if (userName.isNullOrEmpty() || password.isNullOrEmpty() || firstName.isNullOrEmpty() || lastName.isNullOrEmpty()) {
+        if (userName.isEmpty() || password.isEmpty() || firstName.isEmpty() || lastName.isEmpty()) {
             Toast.makeText(this@RegisterActivity, "გთხოვთ შეავსოთ ველები", Toast.LENGTH_SHORT).show()
             return@launchWhenCreated
         }
@@ -76,7 +75,5 @@ class RegisterActivity : LanguageAwareActivity(), View.OnClickListener {
         } finally {
             hideLoading()
         }
-
     }
-
 }

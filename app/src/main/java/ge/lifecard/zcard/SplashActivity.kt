@@ -1,13 +1,15 @@
 package ge.lifecard.zcard
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.view.WindowManager
+import android.view.WindowInsets
 import ge.lifecard.zcard.app.DataStore
 import ge.lifecard.zcard.databinding.ActivitySplashBinding
 import kotlin.concurrent.thread
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : Activity() {
 
     private lateinit var binding: ActivitySplashBinding
@@ -16,10 +18,7 @@ class SplashActivity : Activity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
+        window.insetsController?.hide(WindowInsets.Type.statusBars())
 
         thread {
             for (i in 1..100) {

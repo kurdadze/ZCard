@@ -13,7 +13,6 @@ import androidx.lifecycle.lifecycleScope
 import ge.lifecard.zcard.adapters.UserCardsAdapter
 import ge.lifecard.zcard.app.DataStore
 import ge.lifecard.zcard.databinding.FragmentHomeBinding
-import ge.lifecard.zcard.models.BrandsCard
 import ge.lifecard.zcard.models.UserCards
 import ge.lifecard.zcard.network.NetworkClient
 import kotlinx.coroutines.Dispatchers
@@ -21,7 +20,6 @@ import kotlinx.coroutines.withContext
 
 class FragmentHome : Fragment() {
 
-//    private lateinit var mContext: Context
     private var mContext: Context? = null
 
     private var _binding: FragmentHomeBinding? = null
@@ -42,7 +40,7 @@ class FragmentHome : Fragment() {
                         userId = DataStore.getUserData().id
                     )
                 }
-                Log.d("responce", response.toString())
+                Log.d("response", response.toString())
                 binding.userCardsListView.adapter = mContext?.let { UserCardsAdapter(it, response) }
             } catch (e: Exception) {
 //                Toast.makeText(mContext, "Error", Toast.LENGTH_SHORT).show()
@@ -51,16 +49,15 @@ class FragmentHome : Fragment() {
             }
         }
 
-        binding.userCardsListView.onItemClickListener = object : AdapterView.OnItemClickListener {
-            override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+        binding.userCardsListView.onItemClickListener =
+            AdapterView.OnItemClickListener { parent, _, position, _ ->
                 val item = parent.adapter.getItem(position) as UserCards
                 val intent = Intent(context, BarCodeActivity::class.java)
                 intent.putExtra("cardNumber", item.cardNumber)
                 startActivity(intent)
             }
-        }
 
-        binding.fab.setOnClickListener {barndsCardList()}
+        binding.fab.setOnClickListener {brandsCardList()}
         return binding.root
     }
 
@@ -74,7 +71,7 @@ class FragmentHome : Fragment() {
         mContext = null
     }
 
-    private fun barndsCardList() {
+    private fun brandsCardList() {
         val intent = Intent(this.activity, BrandsCardsActivity::class.java)
         startActivity(intent)
     }

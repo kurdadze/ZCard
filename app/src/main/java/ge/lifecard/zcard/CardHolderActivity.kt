@@ -29,8 +29,8 @@ class CardHolderActivity : LanguageAwareActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         val intent = intent
-        brandLogo = intent.getStringExtra("brandLogo")
-        brandId = intent.getStringExtra("brandId")
+        brandLogo = intent.getStringExtra("brandLogo").toString()
+        brandId = intent.getStringExtra("brandId").toString()
         Glide.with(this)
             .load(brandLogo)
             .into(binding.brandLogo)
@@ -43,6 +43,7 @@ class CardHolderActivity : LanguageAwareActivity(), View.OnClickListener {
         binding.acceptLoyaltyCardButton.setOnClickListener(this)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
@@ -50,8 +51,8 @@ class CardHolderActivity : LanguageAwareActivity(), View.OnClickListener {
                 Toast.makeText(this, getString(R.string.canceled), Toast.LENGTH_LONG).show()
             } else {
                 binding.cardNumberEditText.setText(result.contents)
-                val generitedCard = cardHelper.generateBarCode(binding.cardNumberEditText.text.toString())
-                binding.brandLogo.setImageBitmap(generitedCard)
+                val generatedCard = cardHelper.generateBarCode(binding.cardNumberEditText.text.toString())
+                binding.brandLogo.setImageBitmap(generatedCard)
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)
@@ -74,7 +75,7 @@ class CardHolderActivity : LanguageAwareActivity(), View.OnClickListener {
         val cardHolder = binding.cardHolderEditText.text.toString()
         val moreInfo = binding.moreInfoEditText.text.toString()
 
-        if (cardNumber.isNullOrEmpty() || cardHolder.isNullOrEmpty()) {
+        if (cardNumber.isEmpty() || cardHolder.isEmpty()) {
             Toast.makeText(this@CardHolderActivity, "გთხოვთ შეავსოთ ველები", Toast.LENGTH_SHORT).show()
             return@launchWhenCreated
         }

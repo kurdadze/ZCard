@@ -21,7 +21,7 @@ class MainActivity : LanguageAwareActivity() {
 
         setCurrentFragment(fragmentHome)
 
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+        binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_home -> setCurrentFragment(fragmentHome)
                 R.id.nav_profile -> setCurrentFragment(fragmentProfile)
